@@ -7,7 +7,7 @@ if ($_GET["city"] && $_GET["state"]) {
 	die("Malformed Url");
 }
 
-$servername = "71.90.87.107";
+$servername = "172.25.49.119";
 $username = "cisnerosa";
 $password = "listentothesoundofmyvoice";
 $dbname = "mobiledatabase";

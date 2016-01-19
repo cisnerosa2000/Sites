@@ -1,13 +1,13 @@
 <?php
-if ($_GET['pass'] && $_GET['id']) {
+if ($_GET['pass'] && $_GET['user']) {
 	$pass = $_GET['pass'];
-	$id = $_GET['id']
+	$user = $_GET['user'];
 }
 else {
 	die("malformed url");
 }
 
-$servername = "71.90.87.107";
+$servername = "172.25.49.119";
 $username = "cisnerosa";
 $password = "listentothesoundofmyvoice";
 $dbname = "mobiledatabase";
@@ -19,10 +19,16 @@ if (!$conn) {
 }
 
 
-$query = "SELECT hash FROM posts WHERE id = '".$id ."';";
+$query = "SELECT hash FROM users WHERE username = '".$user ."';";
 
 $old_hash = mysql_fetch_assoc(mysqli_query($conn,$query));
 $new_hash = crypt($pass);
+
+if ($old_hash == $new_hash) {
+	echo "Success!";
+} else {
+	echo "Failure!";
+}
 
 
 
