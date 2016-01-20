@@ -25,6 +25,8 @@ if (mysql_num_rows($query_results) == 0) {
 	echo "0";
 }
 
+mysqli_close($conn);
+
 	
 	
 	

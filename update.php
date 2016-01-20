@@ -28,7 +28,7 @@ $modifier = 0;
 
 if ($direction == 'UP') { 
     $modifier += 1;
-} else {
+} else if ($direction == 'DOWN') {
 	$modifier -= 1;
 }
 
@@ -44,8 +44,12 @@ $update_score_query = "UPDATE posts SET score = " . $final_score . " WHERE id = 
 
 $last_query = mysqli_query($conn,$update_score_query);
 
-if ($last_query){
+if (!$last_query){
 	echo "false";
+	echo mysqli_connect_error();
 }
+mysqli_close($conn);
+
+	
 	
 ?>

@@ -32,6 +32,7 @@ if (!$insert) {
 	
 
 
+mysqli_close($conn);
 
 
 

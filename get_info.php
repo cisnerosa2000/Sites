@@ -36,6 +36,7 @@ if ($old_hash == $new_hash) {
 	
 	
 	
+mysqli_close($conn);
 	
 	
 	

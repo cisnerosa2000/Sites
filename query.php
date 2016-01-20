@@ -31,16 +31,7 @@ mysqli_close($conn);
 	
 ?>
 
-<html>
-<head>
-	<title>SQL Query</title>
-</head>
-<body>
 
-	
-    
-</body>
-<html>
 
 
 
